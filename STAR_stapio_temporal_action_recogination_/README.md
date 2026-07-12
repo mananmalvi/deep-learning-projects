@@ -41,8 +41,8 @@ To make the model accessible and presentable, we developed a dark-themed, premiu
 3. Run the `app.py` script:
    ```bash
    python app.py
-   📬 Let's Connect!
+   
+## 📬 Let's Connect!
 I am currently studying machine learning and building projects in public.
-
-LinkedIn: [https://github.com/]
-GitHub: [https://www.linkedin.com/in/manan-malvi-7849b5382/]
+* LinkedIn: [https://github.com/]
+* GitHub: [https://www.linkedin.com/in/manan-malvi-7849b5382/]
