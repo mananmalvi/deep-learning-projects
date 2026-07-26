@@ -121,23 +121,4 @@ graph TD
 
     J -- "Intensity > 75 & Crying" --> K["🚨 Flashing Red Critical Alert"]
     J -- "Normal / Sleeping" --> L["✅ Stable Monitoring State"]
-📊 Model Performance & BenchmarkWe evaluated CRIB-Net across standard formats to compare inference latency and model size:Model VersionInput DimensionsInference Time (Colab GPU)AccuracyModel Sizefinal_action_model.h5Video (16,112,112,3) + Audio (128,128,1)~38 ms98.4%~85 MBcrib_net_model.tfliteVideo (16,112,112,3) + Audio (128,128,1)~14 ms97.8%~22 MB
 
-🚀 How to Run (Inference)1. Clone the repository:Bashgit clone [https://github.com/your-username/Deep-Learning-Projects.git](https://github.com/your-username/Deep-Learning-Projects.git)
-cd Deep-Learning-Projects/Infant_Sleep_Monitor
-2. Ensure you have the trained model:Make sure the final_action_model.h5 file is present in the directory.3. Run the app.py script:Bashpython app.py
-
-📂 Repository StructurePlaintextInfant_Sleep_Monitor/
-│
-├── 🧠 final_action_model.h5       # Main Keras H5 Multimodal Weights
-├── ⚡ crib_net_model.tflite         # Quantized TFLite Weights for Mobile
-├── 🎨 app.py                      # Gradio Glassmorphism Frontend & Logic
-├── 🖼️ baby_bg.jpeg                # High-Res Dashboard Background
-├── 📋 requirements.txt            # Python Dependencies
-└── 📜 README.md                   # Project Documentation
-
-🤝 Future Roadmap[x] Multimodal H5 + TFLite model integration.[x] iOS-inspired Glassmorphism UI with real-time audio intensity parsing.[ ] Integration with OpenCV non-contact pulse (rPPG) respiration tracker.[ ] Firebase Push Notifications for real-time mobile parent alerts.
-
-📬 Let's Connect!I am currently studying machine learning and building projects in public.
-LinkedIn: Manan MalviGitHub:
-GitHub Profile
