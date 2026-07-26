@@ -46,7 +46,26 @@ Infant distress identification during sleep is a time-critical challenge. **CRIB
 Unlike uni-modal detection systems, CRIB-Net eliminates false alarms caused by ambient background noise or minor physical shifts, ensuring high accuracy in detecting **intense crying, motion disturbance, and infant distress**.
 
 ---
+## 📊 Dataset & Data Collection
 
+CRIB-Net ko train karne ke liye **Multimodal Infant Dataset (Video + Audio)** ka use kiya gaya hai. Model ki high accuracy aur robustness ensure karne ke liye datasets ko standard public repositories aur curated video feeds se collect kiya gaya:
+
+### 1. 🔊 Audio Dataset (Infant Cry & Acoustic Signals)
+- **Donate-A-Cry Corpus & Chillto Dataset:** 1,000+ annotated audio samples representing various infant states (Intense Crying, Discomfort, Hunger, Quiet/Sleeping, and Ambient Noise).
+- **Audio Extraction:** Audio tracks ko `16kHz` sampling rate par resample karke **128x128 MFCC (Mel-Frequency Cepstral Coefficients)** spectrograms extract kiye gaye.
+
+### 2. 🎥 Video Dataset (Infant Movement & Pose)
+- **Annotated Infant Sleep Feeds:** 500+ video clips (Kaggle & Open-Source Infant Action Datasets) containing resting, active crawling, head turning, and distress body movements.
+- **Preprocessing:** Every video sequence is normalized and sampled down to **16 temporal keyframes** at `112x112` RGB resolution.
+
+---
+
+### 🗂️ Data Preprocessing & Augmentation Pipeline
+
+| Modal Type | Raw Source | Extracted Feature Matrix | Data Augmentation Used |
+| :--- | :--- | :--- | :--- |
+| **Audio Stream** | `.wav` / `.mp3` Clips | `128x128` MFCC Spectrograms | Gaussian Noise Injection, Pitch/Time Shifting |
+| **Video Stream** | `.mp4` / `.avi` Feeds | `(16, 112, 112, 3)` Tensor | Spatial Rotation, Brightness Shift, Normalization |
 ## ✨ Key Features & Capabilities
 
 | Feature | Description | Technology |
