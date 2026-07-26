@@ -80,19 +80,19 @@ CRIB-Net uses a **Late Fusion Network Architecture** to independently process sp
 
 ```mermaid
 graph TD
-    A[📹 Video Input Feed] --> B[Frame Sampler: 16 Frames @ 112x112]
-    A --> C[Audio Extractor: WAV Buffer]
+    A["📹 Video Input Feed"] --> B["Frame Sampler: 16 Frames @ 112x112"]
+    A --> C["Audio Extractor: WAV Buffer"]
 
-    B --> D[3D-CNN / Spatial Feature Extractor]
-    C --> E[MFCC Feature Matrix: 128x128]
+    B --> D["3D-CNN / Spatial Feature Extractor"]
+    C --> E["MFCC Feature Matrix: 128x128"]
 
-    D --> F[Video Dense Vector]
-    E --> G[Audio Dense Vector]
+    D --> F["Video Dense Vector"]
+    E --> G["Audio Dense Vector"]
 
-    F --> H[🔀 Late Fusion Layer]
+    F --> H["🔀 Late Fusion Layer"]
     G --> H
 
-    H --> I[Softmax Classification Output]
-    I --> J{Distress Threshold Check}
-    J -- Intensity > 75 & Crying --► K[🚨 Flashing Red Critical Alert]
-    J -- Normal / Sleeping --► L[✅ Stable Monitoring State]
+    H --> I["Softmax Classification Output"]
+    I --> J{"Distress Threshold Check"}
+    J -- "Intensity > 75 & Crying" --> K["🚨 Flashing Red Critical Alert"]
+    J -- "Normal / Sleeping" --> L["✅ Stable Monitoring State"]
