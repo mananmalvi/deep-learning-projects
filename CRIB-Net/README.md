@@ -16,11 +16,11 @@
   </p>
 
   <p>
-    <a href="#key-features--capabilities">Key Features</a> •
+    <a href="#key-features">Key Features</a> •
     <a href="#system-architecture">Architecture</a> •
     <a href="#dashboard-preview">UI Showcase</a> •
-    <a href="#model-performance--benchmark">Metrics</a> •
-    <a href="#how-to-run-inference">How to Run</a>
+    <a href="#model-performance">Metrics</a> •
+    <a href="#how-to-run">How to Run</a>
   </p>
 
   ---
@@ -29,18 +29,19 @@
 
 ## 📑 Table of Contents
 - [📌 About The Project](#about-the-project)
-- [📊 Dataset & Data Collection](#dataset--data-collection)
-- [✨ Key Features & Capabilities](#key-features--capabilities)
+- [📊 Dataset & Data Collection](#dataset-data-collection)
+- [✨ Key Features & Capabilities](#key-features)
 - [🎨 Dashboard Preview](#dashboard-preview)
 - [🏗️ System Architecture](#system-architecture)
-- [📊 Model Performance & Benchmark](#model-performance--benchmark)
-- [🚀 How to Run (Inference)](#how-to-run-inference)
+- [📊 Model Performance & Benchmark](#model-performance)
+- [🚀 How to Run (Inference)](#how-to-run)
 - [📂 Repository Structure](#repository-structure)
 - [🤝 Future Roadmap](#future-roadmap)
 - [📬 Let's Connect!](#lets-connect)
 
 ---
 
+<a id="about-the-project"></a>
 ## 📌 About The Project
 
 Infant distress identification during sleep is a time-critical challenge. **CRIB-Net** solves this by leveraging **Multimodal Late Fusion**—combining spatial-temporal facial/body movement analysis with acoustic spectrum decibel (dB) intensity profiling.
@@ -49,6 +50,7 @@ Unlike uni-modal detection systems, CRIB-Net eliminates false alarms caused by a
 
 ---
 
+<a id="dataset-data-collection"></a>
 ## 📊 Dataset & Data Collection
 
 CRIB-Net ko train karne ke liye **Multimodal Infant Dataset (Video + Audio)** ka use kiya gaya hai. Model ki high accuracy aur robustness ensure karne ke liye datasets ko standard public repositories aur curated video feeds se collect kiya gaya:
@@ -72,6 +74,7 @@ CRIB-Net ko train karne ke liye **Multimodal Infant Dataset (Video + Audio)** ka
 
 ---
 
+<a id="key-features"></a>
 ## ✨ Key Features & Capabilities
 
 | Feature | Description | Technology |
@@ -84,6 +87,7 @@ CRIB-Net ko train karne ke liye **Multimodal Infant Dataset (Video + Audio)** ka
 
 ---
 
+<a id="dashboard-preview"></a>
 ## 🎨 Dashboard Preview
 
 <div align="center">
@@ -99,6 +103,7 @@ CRIB-Net ko train karne ke liye **Multimodal Infant Dataset (Video + Audio)** ka
 
 ---
 
+<a id="system-architecture"></a>
 ## 🏗️ System Architecture
 
 CRIB-Net uses a **Late Fusion Network Architecture** to independently process spatial and temporal acoustic vectors before merging them in dense decision layers:
@@ -125,6 +130,7 @@ graph TD
 
 ---
 
+<a id="model-performance"></a>
 ## 📊 Model Performance & Benchmark
 
 We evaluated **CRIB-Net** across standard formats to compare inference latency and model size:
@@ -136,6 +142,7 @@ We evaluated **CRIB-Net** across standard formats to compare inference latency a
 
 ---
 
+<a id="how-to-run"></a>
 ## 🚀 How to Run (Inference)
 
 **1. Clone the repository:**
@@ -154,6 +161,7 @@ python app.py
 
 ---
 
+<a id="repository-structure"></a>
 ## 📂 Repository Structure
 
 ```text
@@ -169,6 +177,7 @@ Infant_Sleep_Monitor/
 
 ---
 
+<a id="future-roadmap"></a>
 ## 🤝 Future Roadmap
 
 - [x] Multimodal H5 + TFLite model integration.
@@ -178,6 +187,7 @@ Infant_Sleep_Monitor/
 
 ---
 
+<a id="lets-connect"></a>
 ## 📬 Let's Connect!
 
 I am currently studying machine learning and building projects in public.
