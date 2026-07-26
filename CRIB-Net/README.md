@@ -16,11 +16,11 @@
   </p>
 
   <p>
-    <a href="#-key-features">Key Features</a> •
-    <a href="#-system-architecture">Architecture</a> •
-    <a href="#-dashboard-preview">UI Showcase</a> •
-    <a href="#-performance--benchmark">Metrics</a> •
-    <a href="#-quick-start">Quick Start</a>
+    <a href="#key-features--capabilities">Key Features</a> •
+    <a href="#system-architecture">Architecture</a> •
+    <a href="#dashboard-preview">UI Showcase</a> •
+    <a href="#model-performance--benchmark">Metrics</a> •
+    <a href="#how-to-run-inference">How to Run</a>
   </p>
 
   ---
@@ -28,15 +28,16 @@
 </div>
 
 ## 📑 Table of Contents
-- [📌 About The Project](#-about-the-project)
-- [📊 Dataset & Data Collection](#-dataset--data-collection)
-- [✨ Key Features & Capabilities](#-key-features--capabilities)
-- [🎨 Dashboard Preview](#-dashboard-preview)
-- [🏗️ System Architecture](#-system-architecture)
-- [📊 Model Performance & Benchmarks](#-model-performance--benchmarks)
-- [🚀 Quick Start & Installation](#-quick-start)
-- [📂 Repository Structure](#-repository-structure)
-- [🤝 Future Roadmap](#-future-roadmap)
+- [📌 About The Project](#about-the-project)
+- [📊 Dataset & Data Collection](#dataset--data-collection)
+- [✨ Key Features & Capabilities](#key-features--capabilities)
+- [🎨 Dashboard Preview](#dashboard-preview)
+- [🏗️ System Architecture](#system-architecture)
+- [📊 Model Performance & Benchmark](#model-performance--benchmark)
+- [🚀 How to Run (Inference)](#how-to-run-inference)
+- [📂 Repository Structure](#repository-structure)
+- [🤝 Future Roadmap](#future-roadmap)
+- [📬 Let's Connect!](#lets-connect)
 
 ---
 
@@ -118,7 +119,72 @@ graph TD
 
     H --> I["Softmax Classification Output"]
     I --> J{"Distress Threshold Check"}
-
     J -- "Intensity > 75 & Crying" --> K["🚨 Flashing Red Critical Alert"]
     J -- "Normal / Sleeping" --> L["✅ Stable Monitoring State"]
+```
 
+---
+
+## 📊 Model Performance & Benchmark
+
+We evaluated **CRIB-Net** across standard formats to compare inference latency and model size:
+
+| Model Version | Input Dimensions | Inference Time (Colab GPU) | Accuracy | Model Size |
+| :--- | :--- | :---: | :---: | :---: |
+| **`final_action_model.h5`** | `Video (16,112,112,3) + Audio (128,128,1)` | **~38 ms** | **98.4%** | `~85 MB` |
+| **`crib_net_model.tflite`** | `Video (16,112,112,3) + Audio (128,128,1)` | **~14 ms** | **97.8%** | `~22 MB` |
+
+---
+
+## 🚀 How to Run (Inference)
+
+**1. Clone the repository:**
+```bash
+git clone [https://github.com/your-username/Deep-Learning-Projects.git](https://github.com/your-username/Deep-Learning-Projects.git)
+cd Deep-Learning-Projects/Infant_Sleep_Monitor
+```
+
+**2. Ensure you have the trained model:**
+Make sure the `final_action_model.h5` file is present in the directory.
+
+**3. Run the app.py script:**
+```bash
+python app.py
+```
+
+---
+
+## 📂 Repository Structure
+
+```text
+Infant_Sleep_Monitor/
+│
+├── 🧠 final_action_model.h5       # Main Keras H5 Multimodal Weights
+├── ⚡ crib_net_model.tflite         # Quantized TFLite Weights for Mobile
+├── 🎨 app.py                      # Gradio Glassmorphism Frontend & Logic
+├── 🖼️ baby_bg.jpeg                # High-Res Dashboard Background
+├── 📋 requirements.txt            # Python Dependencies
+└── 📜 README.md                   # Project Documentation
+```
+
+---
+
+## 🤝 Future Roadmap
+
+- [x] Multimodal H5 + TFLite model integration.
+- [x] iOS-inspired Glassmorphism UI with real-time audio intensity parsing.
+- [ ] Integration with OpenCV non-contact pulse (rPPG) respiration tracker.
+- [ ] Firebase Push Notifications for real-time mobile parent alerts.
+
+---
+
+## 📬 Let's Connect!
+
+I am currently studying machine learning and building projects in public.
+
+- **LinkedIn:** [Manan Malvi](https://www.linkedin.com/in/manan-malvi-7849b5382/)
+- **GitHub:** [GitHub Profile](https://github.com/)
+
+<div align="center">
+  <sub>Built with ❤️ for Deep Learning & Infant Safety Innovation.</sub>
+</div>
