@@ -29,6 +29,7 @@
 
 ## 📑 Table of Contents
 - [📌 About The Project](#-about-the-project)
+- [📊 Dataset & Data Collection](#-dataset--data-collection)
 - [✨ Key Features & Capabilities](#-key-features--capabilities)
 - [🎨 Dashboard Preview](#-dashboard-preview)
 - [🏗️ System Architecture](#-system-architecture)
@@ -46,6 +47,7 @@ Infant distress identification during sleep is a time-critical challenge. **CRIB
 Unlike uni-modal detection systems, CRIB-Net eliminates false alarms caused by ambient background noise or minor physical shifts, ensuring high accuracy in detecting **intense crying, motion disturbance, and infant distress**.
 
 ---
+
 ## 📊 Dataset & Data Collection
 
 CRIB-Net ko train karne ke liye **Multimodal Infant Dataset (Video + Audio)** ka use kiya gaya hai. Model ki high accuracy aur robustness ensure karne ke liye datasets ko standard public repositories aur curated video feeds se collect kiya gaya:
@@ -66,6 +68,9 @@ CRIB-Net ko train karne ke liye **Multimodal Infant Dataset (Video + Audio)** ka
 | :--- | :--- | :--- | :--- |
 | **Audio Stream** | `.wav` / `.mp3` Clips | `128x128` MFCC Spectrograms | Gaussian Noise Injection, Pitch/Time Shifting |
 | **Video Stream** | `.mp4` / `.avi` Feeds | `(16, 112, 112, 3)` Tensor | Spatial Rotation, Brightness Shift, Normalization |
+
+---
+
 ## ✨ Key Features & Capabilities
 
 | Feature | Description | Technology |
